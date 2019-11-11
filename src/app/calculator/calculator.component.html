@@ -1,0 +1,15 @@
+<p>Calculator works!</p>
+<input type="number" class="form-input" [value]="operand1" (change)="onOperand1Change($event.target.value)">
+<select class="form-input" [value]="operator" (change)="onSelectOperator($event.target.value)">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+
+</select>
+<input type="number" class="form-input" [value]="operand2" (change)="onOperand2Change($event.target.value)">
+<br>
+<button class="form-input" (click)="calculate()">Tinh toan</button>
+<div class="output">
+  {{result}}
+</div>
